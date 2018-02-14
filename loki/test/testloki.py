@@ -85,6 +85,19 @@ class LokiTests(unittest.TestCase):
         # 3 is the sentential root
         self.assertTrue(compiled_pattern.match(sentence,  [2]) == [], "{} starting from position 2 should not lead anywhere.".format(pattern))
 
+    def test_multihop_exact(self):
+        pattern = '<dobj [lemma="make"]'
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} should compile and match correctly".format(pattern)
+        self.assertTrue(compiled_pattern.match(sentence, [4]) == [3], "{} starting from position 4 should lead to position 3.".format(pattern))
+        self.assertTrue(compiled_pattern.match(sentence, range(len(sentence.words))) == [3], "{} starting from any position should only lead to position 3.".format(pattern))
+
+    def test_multihop_exact(self):
+        pattern = '<dobj [lemma=make]'
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} should compile and match correctly".format(pattern)
+        self.assertTrue(compiled_pattern.match(sentence, [4]) == [3], "{} starting from position 4 should lead to position 3.".format(pattern))
+        self.assertTrue(compiled_pattern.match(sentence, range(len(sentence.words))) == [3], "{} starting from any position should only lead to position 3.".format(pattern))
 
 if __name__ == "__main__":
     unittest.main()
