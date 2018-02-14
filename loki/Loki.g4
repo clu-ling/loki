@@ -42,17 +42,17 @@ pattern
 pattern_regex
   : SLASH regex SLASH ;
 
+pattern_literal
+  : (QUOTE literal QUOTE) | literal ;
+
 inner_pattern
   : literal | regex ;
 
 regex
-  : (PUNCT | LETTER | DIGIT)+ ~SLASH ;
+  : (PUNCT | LETTER | DIGIT)+ ;
 
 literal
   : LETTER (DIGIT | PUNCT)* LETTER ;
-
-pattern_literal
-  : (QUOTE inner_pattern QUOTE) | literal ;
 
 token_attribute
   : (WORD | LEMMA | TAG | CHUNK | ENTITY | MENTION | INCOMING | OUTGOING) ;
@@ -60,10 +60,18 @@ token_attribute
 /*
  * loki lexer rules
  */
+
+OPEN_TC
+  : '[' ;
+CLOSE_TC
+  : ']' ;
+
 NEGATED
   : '!' ;
+
 SLASH
   : '/' ;
+
 EQUAL
   : '=' ;
 
@@ -99,7 +107,7 @@ DIGIT
   : [0-9]+ ;
 
 PUNCT
-  : '.'|','|':'|'_'|';'|'?'|'!'|'-'|'^'|'$'|'*'|'+'|'['|']'|'('|')'|'%'+ ;
+  : '.'|','|':'|'_'|';'|'?'|NEGATED|'-'|'^'|'$'|'*'|'+'|OPEN_TC|CLOSE_TC|'('|')'|'%'|'"'+ ;
 
 WHITESPACE
   : [ \t\r\n]+ -> skip ;
