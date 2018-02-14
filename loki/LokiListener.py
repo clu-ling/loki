@@ -107,6 +107,15 @@ class LokiListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LokiParser#pattern_literal.
+    def enterPattern_literal(self, ctx:LokiParser.Pattern_literalContext):
+        pass
+
+    # Exit a parse tree produced by LokiParser#pattern_literal.
+    def exitPattern_literal(self, ctx:LokiParser.Pattern_literalContext):
+        pass
+
+
     # Enter a parse tree produced by LokiParser#inner_pattern.
     def enterInner_pattern(self, ctx:LokiParser.Inner_patternContext):
         pass
@@ -131,15 +140,6 @@ class LokiListener(ParseTreeListener):
 
     # Exit a parse tree produced by LokiParser#literal.
     def exitLiteral(self, ctx:LokiParser.LiteralContext):
-        pass
-
-
-    # Enter a parse tree produced by LokiParser#pattern_literal.
-    def enterPattern_literal(self, ctx:LokiParser.Pattern_literalContext):
-        pass
-
-    # Exit a parse tree produced by LokiParser#pattern_literal.
-    def exitPattern_literal(self, ctx:LokiParser.Pattern_literalContext):
         pass
 
 
