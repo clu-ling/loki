@@ -18,7 +18,6 @@ class LokiPattern(object):
         indices = start_indices
         for i, frag in enumerate(self.fragments):
             passed = frag.match(sentence, indices)
-            print("passed: {}".format(passed))
             # if this isn't the final pattern fragment, we need to advance one token.
             if isinstance(frag, TokenPattern) and i + 1 < num_fragments:
                 indices = [idx + 1 for idx in passed if idx + 1 < len(sentence.words)]
@@ -236,11 +235,11 @@ class LokiPatternListener(LokiListener):
         self.attribute_constraint_fragment = None
 
     def enterGraph_traversal(self, ctx):
-        print("entering graph traversal pattern...")
+        # print("entering graph traversal pattern...")
         assert(self.graph_traversal_fragment is None)
 
     def exitGraph_traversal(self, ctx):
-        print("exiting graph traversal pattern...")
+        # print("exiting graph traversal pattern...")
         assert(self.graph_traversal_fragment is not None)
         frag = self.graph_traversal_fragment
         frag.compile()
@@ -248,39 +247,39 @@ class LokiPatternListener(LokiListener):
         self.graph_traversal_fragment = None
 
     def enterIncoming_wildcard(self, ctx):
-        print("entering incoming wildcard...")
+        # print("entering incoming wildcard...")
         assert(self.graph_traversal_fragment is None)
 
     def exitIncoming_wildcard(self, ctx):
-        print("leaving incoming wildcard...")
+        # print("leaving incoming wildcard...")
         self.graph_traversal_fragment = IncomingWildcard()
 
     def enterOutgoing_wildcard(self, ctx):
-        print("entering outgoing wildcard...")
+        # print("entering outgoing wildcard...")
         assert(self.graph_traversal_fragment is None)
 
     def exitOutgoing_wildcard(self, ctx):
-        print("leaving outgoing wildcard...")
+        # print("leaving outgoing wildcard...")
         self.graph_traversal_fragment = OutgoingWildcard()
 
     def enterIncoming_traversal(self, ctx):
-        print("entering incoming traversal...")
+        # print("entering incoming traversal...")
         assert(self.graph_traversal_fragment is None)
         self.graph_traversal_fragment = IncomingTraversal()
 
     def enterOutgoing_traversal(self, ctx):
-        print("entering outgoing traversal...")
+        # print("entering outgoing traversal...")
         assert(self.graph_traversal_fragment is None)
         self.graph_traversal_fragment = OutgoingTraversal()
 
     def enterToken_constraint(self, ctx):
-        print("Constructing token constraint...")
+        # print("Constructing token constraint...")
         assert(self.token_constraint_fragment == None)
         # start building a token constraint
         self.token_constraint_fragment = TokenConstraint()
 
     def exitToken_constraint(self, ctx):
-        print("Analyzing completed token constraint...")
+        # print("Analyzing completed token constraint...")
         frag = self.token_constraint_fragment
         assert(frag != None)
         # no attribute constraints means this is a wildcard
@@ -293,19 +292,19 @@ class LokiPatternListener(LokiListener):
         self.token_constraint_fragment = None
 
     def enterToken_attribute(self, ctx):
-        print("Analyzing token attribute type...")
+        # print("Analyzing token attribute type...")
         assert(self.attribute_constraint_fragment != None)
         #print(ctx.__dict__)
         token_attribute = ctx.getText()
-        print("token attribute: {}".format(token_attribute))
+        # print("token attribute: {}".format(token_attribute))
         self.attribute_constraint_fragment.token_attribute = token_attribute
 
     def exitToken_attribute(self, ctx):
-        print("validating token attribute...")
+        # print("validating token attribute...")
         assert(self.attribute_constraint_fragment.token_attribute != None)
 
     def enterAttribute_constraint(self, ctx):
-        print("Beginning attribute constraint...")
+        # print("Beginning attribute constraint...")
         # NOTE: because negatedAttributeConstraint occurs higher in the tree,
         # attribute_constraint_fragment may not be none
         #assert(self.attribute_constraint_fragment == None)
@@ -313,35 +312,37 @@ class LokiPatternListener(LokiListener):
             self.attribute_constraint_fragment = AttributeConstraint()
 
     def exitAttribute_constraint(self, ctx):
-        print("Exiting attribute constraint...")
+        # print("Exiting attribute constraint...")
         assert(self.attribute_constraint_fragment != None)
         assert(self.token_constraint_fragment != None)
         frag = self.attribute_constraint_fragment
-        print("frag.negated? {}".format(frag.negated))
-        print("Compiling attribute constraint...")
+        # print("is_regex? {}".format(self.attribute_constraint_fragment.is_regex))
+        # print("frag.negated? {}".format(frag.negated))
+        # print("Compiling attribute constraint...")
         frag.compile()
+        # print("is_regex (after compilation)? {}".format(frag.is_regex))
         self.token_constraint_fragment.attribute_constraints.append(frag)
         self.attribute_constraint_fragment = None
 
     def enterNegated_attribute_constraint(self, ctx):
-        print("Detected negated token attribute contraint...")
+        # print("Detected negated token attribute contraint...")
         # NOTE: negated_attribute_constraint occurs higher in the tree than attribute_constraint
         assert(self.attribute_constraint_fragment == None)
         self.attribute_constraint_fragment = AttributeConstraint()
         self.attribute_constraint_fragment.negated = True
-        print("negated? {}".format(self.attribute_constraint_fragment.negated))
+        # print("negated? {}".format(self.attribute_constraint_fragment.negated))
         # NOTE: though lower in the tree, we'll let exitAttribute_constraint handle appending
 
     def enterLiteral(self, ctx):
-        print("Detected literal...")
+        # print("Detected literal...")
         pattern = ctx.getText()
-        print("Literal: {}".format(pattern))
+        # print("Literal: {}".format(pattern))
         self.store_pattern(pattern, is_regex=False)
 
     def enterRegex(self, ctx):
-        print("Detected regex...")
+        # print("Detected regex...")
         pattern = ctx.getText()
-        print("Regex: {}".format(pattern))
+        # print("Regex: {}".format(pattern))
         self.store_pattern(pattern, is_regex=True)
 
     def store_pattern(self, pattern, is_regex=False):
