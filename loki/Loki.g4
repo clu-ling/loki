@@ -22,7 +22,7 @@ incoming_traversal
   : '<' pattern ;
 
 outgoing_traversal
-  : '>'? pattern ;
+  : '>' pattern ;
 
 /*
  * token constraints
