@@ -8,38 +8,42 @@ import sys
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\30")
-        buf.write("j\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
+        buf.write("x\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
         buf.write("\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16\t")
-        buf.write("\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\3\2\6\2%\n\2\r\2")
-        buf.write("\16\2&\3\3\3\3\3\3\3\3\5\3-\n\3\3\4\3\4\3\5\3\5\3\6\3")
-        buf.write("\6\3\6\3\7\3\7\3\7\3\b\3\b\3\b\5\b<\n\b\3\b\3\b\3\t\3")
-        buf.write("\t\3\t\3\n\3\n\3\n\3\n\3\13\3\13\5\13I\n\13\3\f\3\f\3")
-        buf.write("\f\3\f\3\r\3\r\3\r\3\r\3\r\5\rT\n\r\3\16\3\16\5\16X\n")
-        buf.write("\16\3\17\6\17[\n\17\r\17\16\17\\\3\20\3\20\7\20a\n\20")
-        buf.write("\f\20\16\20d\13\20\3\20\3\20\3\21\3\21\3\21\2\2\22\2\4")
-        buf.write("\6\b\n\f\16\20\22\24\26\30\32\34\36 \2\5\3\2\25\27\3\2")
-        buf.write("\26\27\3\2\r\24\2d\2$\3\2\2\2\4,\3\2\2\2\6.\3\2\2\2\b")
-        buf.write("\60\3\2\2\2\n\62\3\2\2\2\f\65\3\2\2\2\168\3\2\2\2\20?")
-        buf.write("\3\2\2\2\22B\3\2\2\2\24H\3\2\2\2\26J\3\2\2\2\30S\3\2\2")
-        buf.write("\2\32W\3\2\2\2\34Z\3\2\2\2\36^\3\2\2\2 g\3\2\2\2\"%\5")
-        buf.write("\16\b\2#%\5\4\3\2$\"\3\2\2\2$#\3\2\2\2%&\3\2\2\2&$\3\2")
-        buf.write("\2\2&\'\3\2\2\2\'\3\3\2\2\2(-\5\n\6\2)-\5\f\7\2*-\5\6")
-        buf.write("\4\2+-\5\b\5\2,(\3\2\2\2,)\3\2\2\2,*\3\2\2\2,+\3\2\2\2")
-        buf.write("-\5\3\2\2\2./\7\3\2\2/\7\3\2\2\2\60\61\7\4\2\2\61\t\3")
-        buf.write("\2\2\2\62\63\7\13\2\2\63\64\5\24\13\2\64\13\3\2\2\2\65")
-        buf.write("\66\7\f\2\2\66\67\5\24\13\2\67\r\3\2\2\28;\7\5\2\29<\5")
-        buf.write("\22\n\2:<\5\20\t\2;9\3\2\2\2;:\3\2\2\2<=\3\2\2\2=>\7\6")
-        buf.write("\2\2>\17\3\2\2\2?@\7\7\2\2@A\5\22\n\2A\21\3\2\2\2BC\5")
-        buf.write(" \21\2CD\7\t\2\2DE\5\24\13\2E\23\3\2\2\2FI\5\26\f\2GI")
-        buf.write("\5\30\r\2HF\3\2\2\2HG\3\2\2\2I\25\3\2\2\2JK\7\b\2\2KL")
-        buf.write("\5\34\17\2LM\7\b\2\2M\27\3\2\2\2NO\7\n\2\2OP\5\36\20\2")
-        buf.write("PQ\7\n\2\2QT\3\2\2\2RT\5\36\20\2SN\3\2\2\2SR\3\2\2\2T")
-        buf.write("\31\3\2\2\2UX\5\36\20\2VX\5\34\17\2WU\3\2\2\2WV\3\2\2")
-        buf.write("\2X\33\3\2\2\2Y[\t\2\2\2ZY\3\2\2\2[\\\3\2\2\2\\Z\3\2\2")
-        buf.write("\2\\]\3\2\2\2]\35\3\2\2\2^b\7\25\2\2_a\t\3\2\2`_\3\2\2")
-        buf.write("\2ad\3\2\2\2b`\3\2\2\2bc\3\2\2\2ce\3\2\2\2db\3\2\2\2e")
-        buf.write("f\7\25\2\2f\37\3\2\2\2gh\t\4\2\2h!\3\2\2\2\13$&,;HSW\\")
-        buf.write("b")
+        buf.write("\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
+        buf.write("\3\2\3\2\6\2)\n\2\r\2\16\2*\3\3\3\3\3\3\3\3\5\3\61\n\3")
+        buf.write("\3\4\3\4\3\5\3\5\3\6\3\6\3\6\3\7\3\7\3\7\3\b\3\b\5\b?")
+        buf.write("\n\b\3\t\3\t\5\tC\n\t\3\t\3\t\3\n\3\n\3\n\5\nJ\n\n\3\n")
+        buf.write("\3\n\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\r\3\r\5\rW\n\r\3")
+        buf.write("\16\3\16\3\16\3\16\3\17\3\17\3\17\3\17\3\17\5\17b\n\17")
+        buf.write("\3\20\3\20\5\20f\n\20\3\21\6\21i\n\21\r\21\16\21j\3\22")
+        buf.write("\3\22\7\22o\n\22\f\22\16\22r\13\22\3\22\3\22\3\23\3\23")
+        buf.write("\3\23\2\2\24\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"")
+        buf.write("$\2\5\3\2\25\27\3\2\26\27\3\2\r\24\2r\2(\3\2\2\2\4\60")
+        buf.write("\3\2\2\2\6\62\3\2\2\2\b\64\3\2\2\2\n\66\3\2\2\2\f9\3\2")
+        buf.write("\2\2\16>\3\2\2\2\20@\3\2\2\2\22F\3\2\2\2\24M\3\2\2\2\26")
+        buf.write("P\3\2\2\2\30V\3\2\2\2\32X\3\2\2\2\34a\3\2\2\2\36e\3\2")
+        buf.write("\2\2 h\3\2\2\2\"l\3\2\2\2$u\3\2\2\2&)\5\16\b\2\')\5\4")
+        buf.write("\3\2(&\3\2\2\2(\'\3\2\2\2)*\3\2\2\2*(\3\2\2\2*+\3\2\2")
+        buf.write("\2+\3\3\2\2\2,\61\5\n\6\2-\61\5\f\7\2.\61\5\6\4\2/\61")
+        buf.write("\5\b\5\2\60,\3\2\2\2\60-\3\2\2\2\60.\3\2\2\2\60/\3\2\2")
+        buf.write("\2\61\5\3\2\2\2\62\63\7\3\2\2\63\7\3\2\2\2\64\65\7\4\2")
+        buf.write("\2\65\t\3\2\2\2\66\67\7\13\2\2\678\5\30\r\28\13\3\2\2")
+        buf.write("\29:\7\f\2\2:;\5\30\r\2;\r\3\2\2\2<?\5\20\t\2=?\5\22\n")
+        buf.write("\2><\3\2\2\2>=\3\2\2\2?\17\3\2\2\2@B\7\5\2\2AC\7\30\2")
+        buf.write("\2BA\3\2\2\2BC\3\2\2\2CD\3\2\2\2DE\7\6\2\2E\21\3\2\2\2")
+        buf.write("FI\7\5\2\2GJ\5\26\f\2HJ\5\24\13\2IG\3\2\2\2IH\3\2\2\2")
+        buf.write("JK\3\2\2\2KL\7\6\2\2L\23\3\2\2\2MN\7\7\2\2NO\5\26\f\2")
+        buf.write("O\25\3\2\2\2PQ\5$\23\2QR\7\t\2\2RS\5\30\r\2S\27\3\2\2")
+        buf.write("\2TW\5\32\16\2UW\5\34\17\2VT\3\2\2\2VU\3\2\2\2W\31\3\2")
+        buf.write("\2\2XY\7\b\2\2YZ\5 \21\2Z[\7\b\2\2[\33\3\2\2\2\\]\7\n")
+        buf.write("\2\2]^\5\"\22\2^_\7\n\2\2_b\3\2\2\2`b\5\"\22\2a\\\3\2")
+        buf.write("\2\2a`\3\2\2\2b\35\3\2\2\2cf\5\"\22\2df\5 \21\2ec\3\2")
+        buf.write("\2\2ed\3\2\2\2f\37\3\2\2\2gi\t\2\2\2hg\3\2\2\2ij\3\2\2")
+        buf.write("\2jh\3\2\2\2jk\3\2\2\2k!\3\2\2\2lp\7\25\2\2mo\t\3\2\2")
+        buf.write("nm\3\2\2\2or\3\2\2\2pn\3\2\2\2pq\3\2\2\2qs\3\2\2\2rp\3")
+        buf.write("\2\2\2st\7\25\2\2t#\3\2\2\2uv\t\4\2\2v%\3\2\2\2\r(*\60")
+        buf.write(">BIVaejp")
         return buf.getvalue()
 
 
@@ -69,20 +73,23 @@ class LokiParser ( Parser ):
     RULE_outgoing_wildcard = 3
     RULE_incoming_traversal = 4
     RULE_outgoing_traversal = 5
-    RULE_token_constraint = 6
-    RULE_negated_attribute_constraint = 7
-    RULE_attribute_constraint = 8
-    RULE_pattern = 9
-    RULE_pattern_regex = 10
-    RULE_pattern_literal = 11
-    RULE_inner_pattern = 12
-    RULE_regex = 13
-    RULE_literal = 14
-    RULE_token_attribute = 15
+    RULE_surface_pattern = 6
+    RULE_token_wildcard = 7
+    RULE_token_constraint = 8
+    RULE_negated_attribute_constraint = 9
+    RULE_attribute_constraint = 10
+    RULE_pattern = 11
+    RULE_pattern_regex = 12
+    RULE_pattern_literal = 13
+    RULE_inner_pattern = 14
+    RULE_regex = 15
+    RULE_literal = 16
+    RULE_token_attribute = 17
 
     ruleNames =  [ "loki_pattern", "graph_traversal", "incoming_wildcard", 
                    "outgoing_wildcard", "incoming_traversal", "outgoing_traversal", 
-                   "token_constraint", "negated_attribute_constraint", "attribute_constraint", 
+                   "surface_pattern", "token_wildcard", "token_constraint", 
+                   "negated_attribute_constraint", "attribute_constraint", 
                    "pattern", "pattern_regex", "pattern_literal", "inner_pattern", 
                    "regex", "literal", "token_attribute" ]
 
@@ -124,11 +131,11 @@ class LokiParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def token_constraint(self, i:int=None):
+        def surface_pattern(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(LokiParser.Token_constraintContext)
+                return self.getTypedRuleContexts(LokiParser.Surface_patternContext)
             else:
-                return self.getTypedRuleContext(LokiParser.Token_constraintContext,i)
+                return self.getTypedRuleContext(LokiParser.Surface_patternContext,i)
 
 
         def graph_traversal(self, i:int=None):
@@ -159,25 +166,25 @@ class LokiParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 34 
+            self.state = 38 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 34
+                self.state = 38
                 self._errHandler.sync(self)
                 token = self._input.LA(1)
                 if token in [LokiParser.OPEN_TC]:
-                    self.state = 32
-                    self.token_constraint()
+                    self.state = 36
+                    self.surface_pattern()
                     pass
                 elif token in [LokiParser.T__0, LokiParser.T__1, LokiParser.INCOMING_DEP, LokiParser.OUTGOING_DEP]:
-                    self.state = 33
+                    self.state = 37
                     self.graph_traversal()
                     pass
                 else:
                     raise NoViableAltException(self)
 
-                self.state = 36 
+                self.state = 40 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LokiParser.T__0) | (1 << LokiParser.T__1) | (1 << LokiParser.OPEN_TC) | (1 << LokiParser.INCOMING_DEP) | (1 << LokiParser.OUTGOING_DEP))) != 0)):
@@ -232,27 +239,27 @@ class LokiParser ( Parser ):
         localctx = LokiParser.Graph_traversalContext(self, self._ctx, self.state)
         self.enterRule(localctx, 2, self.RULE_graph_traversal)
         try:
-            self.state = 42
+            self.state = 46
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LokiParser.INCOMING_DEP]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 38
+                self.state = 42
                 self.incoming_traversal()
                 pass
             elif token in [LokiParser.OUTGOING_DEP]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 39
+                self.state = 43
                 self.outgoing_traversal()
                 pass
             elif token in [LokiParser.T__0]:
                 self.enterOuterAlt(localctx, 3)
-                self.state = 40
+                self.state = 44
                 self.incoming_wildcard()
                 pass
             elif token in [LokiParser.T__1]:
                 self.enterOuterAlt(localctx, 4)
-                self.state = 41
+                self.state = 45
                 self.outgoing_wildcard()
                 pass
             else:
@@ -293,7 +300,7 @@ class LokiParser ( Parser ):
         self.enterRule(localctx, 4, self.RULE_incoming_wildcard)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 44
+            self.state = 48
             self.match(LokiParser.T__0)
         except RecognitionException as re:
             localctx.exception = re
@@ -330,7 +337,7 @@ class LokiParser ( Parser ):
         self.enterRule(localctx, 6, self.RULE_outgoing_wildcard)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 46
+            self.state = 50
             self.match(LokiParser.T__1)
         except RecognitionException as re:
             localctx.exception = re
@@ -370,9 +377,9 @@ class LokiParser ( Parser ):
         self.enterRule(localctx, 8, self.RULE_incoming_traversal)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 48
+            self.state = 52
             self.match(LokiParser.INCOMING_DEP)
-            self.state = 49
+            self.state = 53
             self.pattern()
         except RecognitionException as re:
             localctx.exception = re
@@ -412,10 +419,117 @@ class LokiParser ( Parser ):
         self.enterRule(localctx, 10, self.RULE_outgoing_traversal)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 51
+            self.state = 55
             self.match(LokiParser.OUTGOING_DEP)
-            self.state = 52
+            self.state = 56
             self.pattern()
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class Surface_patternContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def token_wildcard(self):
+            return self.getTypedRuleContext(LokiParser.Token_wildcardContext,0)
+
+
+        def token_constraint(self):
+            return self.getTypedRuleContext(LokiParser.Token_constraintContext,0)
+
+
+        def getRuleIndex(self):
+            return LokiParser.RULE_surface_pattern
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSurface_pattern" ):
+                listener.enterSurface_pattern(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSurface_pattern" ):
+                listener.exitSurface_pattern(self)
+
+
+
+
+    def surface_pattern(self):
+
+        localctx = LokiParser.Surface_patternContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 12, self.RULE_surface_pattern)
+        try:
+            self.state = 60
+            self._errHandler.sync(self)
+            la_ = self._interp.adaptivePredict(self._input,3,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 58
+                self.token_wildcard()
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 59
+                self.token_constraint()
+                pass
+
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+    class Token_wildcardContext(ParserRuleContext):
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def WHITESPACE(self):
+            return self.getToken(LokiParser.WHITESPACE, 0)
+
+        def getRuleIndex(self):
+            return LokiParser.RULE_token_wildcard
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterToken_wildcard" ):
+                listener.enterToken_wildcard(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitToken_wildcard" ):
+                listener.exitToken_wildcard(self)
+
+
+
+
+    def token_wildcard(self):
+
+        localctx = LokiParser.Token_wildcardContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_token_wildcard)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 62
+            self.match(LokiParser.OPEN_TC)
+            self.state = 64
+            self._errHandler.sync(self)
+            _la = self._input.LA(1)
+            if _la==LokiParser.WHITESPACE:
+                self.state = 63
+                self.match(LokiParser.WHITESPACE)
+
+
+            self.state = 66
+            self.match(LokiParser.CLOSE_TC)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -455,26 +569,26 @@ class LokiParser ( Parser ):
     def token_constraint(self):
 
         localctx = LokiParser.Token_constraintContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_token_constraint)
+        self.enterRule(localctx, 16, self.RULE_token_constraint)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 54
+            self.state = 68
             self.match(LokiParser.OPEN_TC)
-            self.state = 57
+            self.state = 71
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LokiParser.WORD, LokiParser.LEMMA, LokiParser.TAG, LokiParser.CHUNK, LokiParser.ENTITY, LokiParser.MENTION, LokiParser.INCOMING, LokiParser.OUTGOING]:
-                self.state = 55
+                self.state = 69
                 self.attribute_constraint()
                 pass
             elif token in [LokiParser.NEGATED]:
-                self.state = 56
+                self.state = 70
                 self.negated_attribute_constraint()
                 pass
             else:
                 raise NoViableAltException(self)
 
-            self.state = 59
+            self.state = 73
             self.match(LokiParser.CLOSE_TC)
         except RecognitionException as re:
             localctx.exception = re
@@ -514,12 +628,12 @@ class LokiParser ( Parser ):
     def negated_attribute_constraint(self):
 
         localctx = LokiParser.Negated_attribute_constraintContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_negated_attribute_constraint)
+        self.enterRule(localctx, 18, self.RULE_negated_attribute_constraint)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 61
+            self.state = 75
             self.match(LokiParser.NEGATED)
-            self.state = 62
+            self.state = 76
             self.attribute_constraint()
         except RecognitionException as re:
             localctx.exception = re
@@ -563,14 +677,14 @@ class LokiParser ( Parser ):
     def attribute_constraint(self):
 
         localctx = LokiParser.Attribute_constraintContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 16, self.RULE_attribute_constraint)
+        self.enterRule(localctx, 20, self.RULE_attribute_constraint)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 64
+            self.state = 78
             self.token_attribute()
-            self.state = 65
+            self.state = 79
             self.match(LokiParser.EQUAL)
-            self.state = 66
+            self.state = 80
             self.pattern()
         except RecognitionException as re:
             localctx.exception = re
@@ -611,19 +725,19 @@ class LokiParser ( Parser ):
     def pattern(self):
 
         localctx = LokiParser.PatternContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_pattern)
+        self.enterRule(localctx, 22, self.RULE_pattern)
         try:
-            self.state = 70
+            self.state = 84
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LokiParser.SLASH]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 68
+                self.state = 82
                 self.pattern_regex()
                 pass
             elif token in [LokiParser.QUOTE, LokiParser.LETTER]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 69
+                self.state = 83
                 self.pattern_literal()
                 pass
             else:
@@ -670,14 +784,14 @@ class LokiParser ( Parser ):
     def pattern_regex(self):
 
         localctx = LokiParser.Pattern_regexContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 20, self.RULE_pattern_regex)
+        self.enterRule(localctx, 24, self.RULE_pattern_regex)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 72
+            self.state = 86
             self.match(LokiParser.SLASH)
-            self.state = 73
+            self.state = 87
             self.regex()
-            self.state = 74
+            self.state = 88
             self.match(LokiParser.SLASH)
         except RecognitionException as re:
             localctx.exception = re
@@ -720,23 +834,23 @@ class LokiParser ( Parser ):
     def pattern_literal(self):
 
         localctx = LokiParser.Pattern_literalContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_pattern_literal)
+        self.enterRule(localctx, 26, self.RULE_pattern_literal)
         try:
-            self.state = 81
+            self.state = 95
             self._errHandler.sync(self)
             token = self._input.LA(1)
             if token in [LokiParser.QUOTE]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 76
+                self.state = 90
                 self.match(LokiParser.QUOTE)
-                self.state = 77
+                self.state = 91
                 self.literal()
-                self.state = 78
+                self.state = 92
                 self.match(LokiParser.QUOTE)
                 pass
             elif token in [LokiParser.LETTER]:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 80
+                self.state = 94
                 self.literal()
                 pass
             else:
@@ -781,20 +895,20 @@ class LokiParser ( Parser ):
     def inner_pattern(self):
 
         localctx = LokiParser.Inner_patternContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 24, self.RULE_inner_pattern)
+        self.enterRule(localctx, 28, self.RULE_inner_pattern)
         try:
-            self.state = 85
+            self.state = 99
             self._errHandler.sync(self)
-            la_ = self._interp.adaptivePredict(self._input,6,self._ctx)
+            la_ = self._interp.adaptivePredict(self._input,8,self._ctx)
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 83
+                self.state = 97
                 self.literal()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
-                self.state = 84
+                self.state = 98
                 self.regex()
                 pass
 
@@ -848,22 +962,22 @@ class LokiParser ( Parser ):
     def regex(self):
 
         localctx = LokiParser.RegexContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_regex)
+        self.enterRule(localctx, 30, self.RULE_regex)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 88 
+            self.state = 102 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while True:
-                self.state = 87
+                self.state = 101
                 _la = self._input.LA(1)
                 if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LokiParser.LETTER) | (1 << LokiParser.DIGIT) | (1 << LokiParser.PUNCT))) != 0)):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 90 
+                self.state = 104 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if not ((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LokiParser.LETTER) | (1 << LokiParser.DIGIT) | (1 << LokiParser.PUNCT))) != 0)):
@@ -918,28 +1032,28 @@ class LokiParser ( Parser ):
     def literal(self):
 
         localctx = LokiParser.LiteralContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_literal)
+        self.enterRule(localctx, 32, self.RULE_literal)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 92
+            self.state = 106
             self.match(LokiParser.LETTER)
-            self.state = 96
+            self.state = 110
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while _la==LokiParser.DIGIT or _la==LokiParser.PUNCT:
-                self.state = 93
+                self.state = 107
                 _la = self._input.LA(1)
                 if not(_la==LokiParser.DIGIT or _la==LokiParser.PUNCT):
                     self._errHandler.recoverInline(self)
                 else:
                     self._errHandler.reportMatch(self)
                     self.consume()
-                self.state = 98
+                self.state = 112
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 99
+            self.state = 113
             self.match(LokiParser.LETTER)
         except RecognitionException as re:
             localctx.exception = re
@@ -996,11 +1110,11 @@ class LokiParser ( Parser ):
     def token_attribute(self):
 
         localctx = LokiParser.Token_attributeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_token_attribute)
+        self.enterRule(localctx, 34, self.RULE_token_attribute)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 101
+            self.state = 115
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LokiParser.WORD) | (1 << LokiParser.LEMMA) | (1 << LokiParser.TAG) | (1 << LokiParser.CHUNK) | (1 << LokiParser.ENTITY) | (1 << LokiParser.MENTION) | (1 << LokiParser.INCOMING) | (1 << LokiParser.OUTGOING))) != 0)):
                 self._errHandler.recoverInline(self)

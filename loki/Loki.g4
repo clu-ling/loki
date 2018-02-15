@@ -4,7 +4,7 @@ grammar Loki;
  * loki parser Rules
  */
 loki_pattern
-  : (token_constraint | graph_traversal)+ ;
+  : (surface_pattern | graph_traversal)+ ;
 
 /*
  * graph-based traversal patterns
@@ -27,6 +27,13 @@ outgoing_traversal
 /*
  * token constraints
  */
+
+surface_pattern
+  : token_wildcard | token_constraint ;
+
+token_wildcard
+  : '[' WHITESPACE? ']' ;
+
 token_constraint
   : '[' (attribute_constraint | negated_attribute_constraint) ']' ;
 

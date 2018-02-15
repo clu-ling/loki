@@ -62,6 +62,24 @@ class LokiListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by LokiParser#surface_pattern.
+    def enterSurface_pattern(self, ctx:LokiParser.Surface_patternContext):
+        pass
+
+    # Exit a parse tree produced by LokiParser#surface_pattern.
+    def exitSurface_pattern(self, ctx:LokiParser.Surface_patternContext):
+        pass
+
+
+    # Enter a parse tree produced by LokiParser#token_wildcard.
+    def enterToken_wildcard(self, ctx:LokiParser.Token_wildcardContext):
+        pass
+
+    # Exit a parse tree produced by LokiParser#token_wildcard.
+    def exitToken_wildcard(self, ctx:LokiParser.Token_wildcardContext):
+        pass
+
+
     # Enter a parse tree produced by LokiParser#token_constraint.
     def enterToken_constraint(self, ctx:LokiParser.Token_constraintContext):
         pass
