@@ -18,8 +18,9 @@ class LokiPattern(object):
         indices = start_indices
         for i, frag in enumerate(self.fragments):
             passed = frag.match(sentence, indices)
-            # if this isn't the final pattern fragment, we need to advance one token.
-            if isinstance(frag, TokenPattern) and i + 1 < num_fragments:
+            # if this isn't the final pattern fragment, we need to advance one token iff the next frag is also a TokenPattern
+            # ex. "<dobj [lemma="make"] [] >dep", but not "<dobj [lemma="make"] >dep"
+            if isinstance(frag, TokenPattern) and i + 1 < num_fragments and isinstance(self.fragments[i + 1], TokenPattern):
                 indices = [idx + 1 for idx in passed if idx + 1 < len(sentence.words)]
             # this covers both TraversalPatterns as well as fragment-final TokenPatterns
             else:
