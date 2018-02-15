@@ -17,6 +17,17 @@ class LokiTests(unittest.TestCase):
     """
     Test application of Loki patterns
     """
+    def test_token_wildcard(self):
+        pattern = '[]'
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} should compile and match correctly".format(pattern)
+        res = compiled_pattern.match(sentence, range(len(sentence.words)))
+        self.assertTrue(res == list(range(len(sentence.words))), "{} starting from any token should be valid at all positions. Actual position: {}".format(pattern, res))
+        res = compiled_pattern.match(sentence, [10])
+        self.assertTrue(res == [10], "{} starting from position 10 should be valid. Actual position: {}".format(pattern, res))
+        res = compiled_pattern.match(sentence, [100])
+        self.assertTrue(res == [], "{} starting from position 100 should not be valid. Actual position: {}".format(pattern, res))
+
     def test_token_lemma_exact(self):
         pattern = '[lemma=mistake]'
         compiled_pattern = LokiCompiler.compile(pattern)
