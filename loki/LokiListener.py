@@ -168,5 +168,3 @@ class LokiListener(ParseTreeListener):
     # Exit a parse tree produced by LokiParser#token_attribute.
     def exitToken_attribute(self, ctx:LokiParser.Token_attributeContext):
         pass
-
-

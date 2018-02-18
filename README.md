@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/myedibleenso/loki.svg?branch=master)](https://travis-ci.org/myedibleenso/loki)
+
 ### loki
 
 Just enough Odin to get into trouble.
