@@ -1,0 +1,23 @@
+language: python
+
+branches:
+  only:
+    - master
+
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+
+# command to install dependencies
+install:
+  #- pip install .
+  - pip install .[test]
+
+# command to run tests
+script:
+  - green -vv --run-coverage
+
+after_success:
+  - coveralls
