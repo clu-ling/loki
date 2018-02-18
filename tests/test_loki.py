@@ -61,6 +61,39 @@ class LokiTests(unittest.TestCase):
         res = compiled_pattern.match(sentence, [100])
         self.assertTrue(res == [], "{} starting from position 100 should not be valid. Actual position: {}".format(pattern, res))
 
+    def test_token_tag_exact(self):
+        pattern = '[tag=NNS]'
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} should compile and match correctly".format(pattern)
+        res = compiled_pattern.match(sentence, range(len(sentence.words)))
+        self.assertTrue(res == [4,9], "{} starting from any token should only be valid at positions 4 and 9. Actual position: {}".format(pattern, res))
+        res = compiled_pattern.match(sentence, [10])
+        self.assertTrue(res == [], "{} starting from position 10 should not be valid. Actual position: {}".format(pattern, res))
+        res = compiled_pattern.match(sentence, [100])
+        self.assertTrue(res == [], "{} starting from position 100 should not be valid. Actual position: {}".format(pattern, res))
+
+    def test_token_tag_regex(self):
+        pattern = '[tag=/^NN/]'
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} should compile and match correctly".format(pattern)
+        res = compiled_pattern.match(sentence, range(len(sentence.words)))
+        self.assertTrue(res == [4,9], "{} starting from any token should only be valid at positions 4 and 9. Actual position: {}".format(pattern, res))
+        res = compiled_pattern.match(sentence, [10])
+        self.assertTrue(res == [], "{} starting from position 10 should not be valid. Actual position: {}".format(pattern, res))
+        res = compiled_pattern.match(sentence, [100])
+        self.assertTrue(res == [], "{} starting from position 100 should not be valid. Actual position: {}".format(pattern, res))
+
+    def test_token_tag_negated_exact(self):
+        pattern = '[!tag=NNS]'
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} should compile and match correctly".format(pattern)
+        res = compiled_pattern.match(sentence, range(len(sentence.words)))
+        self.assertTrue(res == [0,1,2,3,5,6,7,8,10], "{} starting from any token should not be valid at positions 4 or 9. Actual position: {}".format(pattern, res))
+        res = compiled_pattern.match(sentence, [10])
+        self.assertTrue(res == [10], "{} starting from position 10 should be valid at position 10. Actual position: {}".format(pattern, res))
+        res = compiled_pattern.match(sentence, [100])
+        self.assertTrue(res == [], "{} starting from position 100 should not be valid. Actual position: {}".format(pattern, res))
+
     def test_multi_token_pattern(self):
         pattern = '[lemma=make] [lemma=mistake]'
         compiled_pattern = LokiCompiler.compile(pattern)

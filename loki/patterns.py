@@ -205,7 +205,7 @@ class AttributeConstraint(object):
             toks = sentence.words
             return match_tokens(toks)
         if self.token_attribute == "tag":
-            toks = sentence.words
+            toks = sentence.tags
             return match_tokens(toks)
         if self.token_attribute == "lemma":
             toks = sentence.lemmas
