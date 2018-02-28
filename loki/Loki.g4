@@ -59,7 +59,7 @@ regex
   : (PUNCT | LETTER | DIGIT)+ ;
 
 literal
-  : LETTER (DIGIT | PUNCT)* LETTER ;
+  : (LETTER (DIGIT | PUNCT)* LETTER) | LETTER ;
 
 token_attribute
   : (WORD | LEMMA | TAG | CHUNK | ENTITY | MENTION | INCOMING | OUTGOING) ;
