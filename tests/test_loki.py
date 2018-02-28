@@ -13,6 +13,10 @@ json_file = os.path.join(__location__, "sentence.json")
 with open(json_file, "r") as jf:
     sentence = Sentence.load_from_JSON(json.load(jf))
 
+json_file = os.path.join(__location__, "sentence2.json")
+with open(json_file, "r") as jf:
+    sentence2 = Sentence.load_from_JSON(json.load(jf))
+
 class LokiTests(unittest.TestCase):
     """
     Test application of Loki patterns
@@ -148,6 +152,14 @@ class LokiTests(unittest.TestCase):
         # 3 is the sentential root
         res = compiled_pattern.match(sentence, [2])
         self.assertTrue(res == [], "{} starting from position 2 should not lead anywhere. Actual position: {}".format(pattern, res))
+
+    def test_multihop_graph_traversal(self):
+        pattern = "<< >dep >dep"
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} should compile and match correctly".format(pattern)
+        self.assertTrue(len(compiled_pattern.fragments) == 3, "{} should produce 3 fragments, but {} generated".format(pattern, len(compiled_pattern.fragments)))
+        res = compiled_pattern.match(sentence2, [43])
+        self.assertTrue(res == [72], "{} starting from position 43 should lead to position 72. Actual position: {}".format(pattern, res))
 
     def test_multihop_exact(self):
         pattern = '<dobj [lemma="make"]'

@@ -26,9 +26,7 @@ The `antlr` grammar for `Loki.g4` (referenced in the instructions below) is loca
 ### `python`
 
 ```
-antlr4 -Dlanguage=Python3 Loki.g4 -o python
-cd python
-python test_loki.py test.txt
+antlr4 -Dlanguage=Python3 Loki.g4 -o loki
 ```
 
 ### `java`

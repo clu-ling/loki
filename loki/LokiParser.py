@@ -8,7 +8,7 @@ import sys
 def serializedATN():
     with StringIO() as buf:
         buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\30")
-        buf.write("x\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
+        buf.write("z\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
         buf.write("\t\b\4\t\t\t\4\n\t\n\4\13\t\13\4\f\t\f\4\r\t\r\4\16\t")
         buf.write("\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22\4\23\t\23")
         buf.write("\3\2\3\2\6\2)\n\2\r\2\16\2*\3\3\3\3\3\3\3\3\5\3\61\n\3")
@@ -17,33 +17,33 @@ def serializedATN():
         buf.write("\3\n\3\13\3\13\3\13\3\f\3\f\3\f\3\f\3\r\3\r\5\rW\n\r\3")
         buf.write("\16\3\16\3\16\3\16\3\17\3\17\3\17\3\17\3\17\5\17b\n\17")
         buf.write("\3\20\3\20\5\20f\n\20\3\21\6\21i\n\21\r\21\16\21j\3\22")
-        buf.write("\3\22\7\22o\n\22\f\22\16\22r\13\22\3\22\3\22\3\23\3\23")
-        buf.write("\3\23\2\2\24\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"")
-        buf.write("$\2\5\3\2\25\27\3\2\26\27\3\2\r\24\2r\2(\3\2\2\2\4\60")
-        buf.write("\3\2\2\2\6\62\3\2\2\2\b\64\3\2\2\2\n\66\3\2\2\2\f9\3\2")
-        buf.write("\2\2\16>\3\2\2\2\20@\3\2\2\2\22F\3\2\2\2\24M\3\2\2\2\26")
-        buf.write("P\3\2\2\2\30V\3\2\2\2\32X\3\2\2\2\34a\3\2\2\2\36e\3\2")
-        buf.write("\2\2 h\3\2\2\2\"l\3\2\2\2$u\3\2\2\2&)\5\16\b\2\')\5\4")
-        buf.write("\3\2(&\3\2\2\2(\'\3\2\2\2)*\3\2\2\2*(\3\2\2\2*+\3\2\2")
-        buf.write("\2+\3\3\2\2\2,\61\5\n\6\2-\61\5\f\7\2.\61\5\6\4\2/\61")
-        buf.write("\5\b\5\2\60,\3\2\2\2\60-\3\2\2\2\60.\3\2\2\2\60/\3\2\2")
-        buf.write("\2\61\5\3\2\2\2\62\63\7\3\2\2\63\7\3\2\2\2\64\65\7\4\2")
-        buf.write("\2\65\t\3\2\2\2\66\67\7\13\2\2\678\5\30\r\28\13\3\2\2")
-        buf.write("\29:\7\f\2\2:;\5\30\r\2;\r\3\2\2\2<?\5\20\t\2=?\5\22\n")
-        buf.write("\2><\3\2\2\2>=\3\2\2\2?\17\3\2\2\2@B\7\5\2\2AC\7\30\2")
-        buf.write("\2BA\3\2\2\2BC\3\2\2\2CD\3\2\2\2DE\7\6\2\2E\21\3\2\2\2")
-        buf.write("FI\7\5\2\2GJ\5\26\f\2HJ\5\24\13\2IG\3\2\2\2IH\3\2\2\2")
-        buf.write("JK\3\2\2\2KL\7\6\2\2L\23\3\2\2\2MN\7\7\2\2NO\5\26\f\2")
-        buf.write("O\25\3\2\2\2PQ\5$\23\2QR\7\t\2\2RS\5\30\r\2S\27\3\2\2")
-        buf.write("\2TW\5\32\16\2UW\5\34\17\2VT\3\2\2\2VU\3\2\2\2W\31\3\2")
-        buf.write("\2\2XY\7\b\2\2YZ\5 \21\2Z[\7\b\2\2[\33\3\2\2\2\\]\7\n")
-        buf.write("\2\2]^\5\"\22\2^_\7\n\2\2_b\3\2\2\2`b\5\"\22\2a\\\3\2")
-        buf.write("\2\2a`\3\2\2\2b\35\3\2\2\2cf\5\"\22\2df\5 \21\2ec\3\2")
-        buf.write("\2\2ed\3\2\2\2f\37\3\2\2\2gi\t\2\2\2hg\3\2\2\2ij\3\2\2")
-        buf.write("\2jh\3\2\2\2jk\3\2\2\2k!\3\2\2\2lp\7\25\2\2mo\t\3\2\2")
-        buf.write("nm\3\2\2\2or\3\2\2\2pn\3\2\2\2pq\3\2\2\2qs\3\2\2\2rp\3")
-        buf.write("\2\2\2st\7\25\2\2t#\3\2\2\2uv\t\4\2\2v%\3\2\2\2\r(*\60")
-        buf.write(">BIVaejp")
+        buf.write("\3\22\7\22o\n\22\f\22\16\22r\13\22\3\22\3\22\5\22v\n\22")
+        buf.write("\3\23\3\23\3\23\2\2\24\2\4\6\b\n\f\16\20\22\24\26\30\32")
+        buf.write("\34\36 \"$\2\5\3\2\25\27\3\2\26\27\3\2\r\24\2u\2(\3\2")
+        buf.write("\2\2\4\60\3\2\2\2\6\62\3\2\2\2\b\64\3\2\2\2\n\66\3\2\2")
+        buf.write("\2\f9\3\2\2\2\16>\3\2\2\2\20@\3\2\2\2\22F\3\2\2\2\24M")
+        buf.write("\3\2\2\2\26P\3\2\2\2\30V\3\2\2\2\32X\3\2\2\2\34a\3\2\2")
+        buf.write("\2\36e\3\2\2\2 h\3\2\2\2\"u\3\2\2\2$w\3\2\2\2&)\5\16\b")
+        buf.write("\2\')\5\4\3\2(&\3\2\2\2(\'\3\2\2\2)*\3\2\2\2*(\3\2\2\2")
+        buf.write("*+\3\2\2\2+\3\3\2\2\2,\61\5\n\6\2-\61\5\f\7\2.\61\5\6")
+        buf.write("\4\2/\61\5\b\5\2\60,\3\2\2\2\60-\3\2\2\2\60.\3\2\2\2\60")
+        buf.write("/\3\2\2\2\61\5\3\2\2\2\62\63\7\3\2\2\63\7\3\2\2\2\64\65")
+        buf.write("\7\4\2\2\65\t\3\2\2\2\66\67\7\13\2\2\678\5\30\r\28\13")
+        buf.write("\3\2\2\29:\7\f\2\2:;\5\30\r\2;\r\3\2\2\2<?\5\20\t\2=?")
+        buf.write("\5\22\n\2><\3\2\2\2>=\3\2\2\2?\17\3\2\2\2@B\7\5\2\2AC")
+        buf.write("\7\30\2\2BA\3\2\2\2BC\3\2\2\2CD\3\2\2\2DE\7\6\2\2E\21")
+        buf.write("\3\2\2\2FI\7\5\2\2GJ\5\26\f\2HJ\5\24\13\2IG\3\2\2\2IH")
+        buf.write("\3\2\2\2JK\3\2\2\2KL\7\6\2\2L\23\3\2\2\2MN\7\7\2\2NO\5")
+        buf.write("\26\f\2O\25\3\2\2\2PQ\5$\23\2QR\7\t\2\2RS\5\30\r\2S\27")
+        buf.write("\3\2\2\2TW\5\32\16\2UW\5\34\17\2VT\3\2\2\2VU\3\2\2\2W")
+        buf.write("\31\3\2\2\2XY\7\b\2\2YZ\5 \21\2Z[\7\b\2\2[\33\3\2\2\2")
+        buf.write("\\]\7\n\2\2]^\5\"\22\2^_\7\n\2\2_b\3\2\2\2`b\5\"\22\2")
+        buf.write("a\\\3\2\2\2a`\3\2\2\2b\35\3\2\2\2cf\5\"\22\2df\5 \21\2")
+        buf.write("ec\3\2\2\2ed\3\2\2\2f\37\3\2\2\2gi\t\2\2\2hg\3\2\2\2i")
+        buf.write("j\3\2\2\2jh\3\2\2\2jk\3\2\2\2k!\3\2\2\2lp\7\25\2\2mo\t")
+        buf.write("\3\2\2nm\3\2\2\2or\3\2\2\2pn\3\2\2\2pq\3\2\2\2qs\3\2\2")
+        buf.write("\2rp\3\2\2\2sv\7\25\2\2tv\7\25\2\2ul\3\2\2\2ut\3\2\2\2")
+        buf.write("v#\3\2\2\2wx\t\4\2\2x%\3\2\2\2\16(*\60>BIVaejpu")
         return buf.getvalue()
 
 
@@ -1035,26 +1035,39 @@ class LokiParser ( Parser ):
         self.enterRule(localctx, 32, self.RULE_literal)
         self._la = 0 # Token type
         try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 106
-            self.match(LokiParser.LETTER)
-            self.state = 110
+            self.state = 115
             self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while _la==LokiParser.DIGIT or _la==LokiParser.PUNCT:
-                self.state = 107
-                _la = self._input.LA(1)
-                if not(_la==LokiParser.DIGIT or _la==LokiParser.PUNCT):
-                    self._errHandler.recoverInline(self)
-                else:
-                    self._errHandler.reportMatch(self)
-                    self.consume()
-                self.state = 112
+            la_ = self._interp.adaptivePredict(self._input,11,self._ctx)
+            if la_ == 1:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 106
+                self.match(LokiParser.LETTER)
+                self.state = 110
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
+                while _la==LokiParser.DIGIT or _la==LokiParser.PUNCT:
+                    self.state = 107
+                    _la = self._input.LA(1)
+                    if not(_la==LokiParser.DIGIT or _la==LokiParser.PUNCT):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 112
+                    self._errHandler.sync(self)
+                    _la = self._input.LA(1)
 
-            self.state = 113
-            self.match(LokiParser.LETTER)
+                self.state = 113
+                self.match(LokiParser.LETTER)
+                pass
+
+            elif la_ == 2:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 114
+                self.match(LokiParser.LETTER)
+                pass
+
+
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1114,7 +1127,7 @@ class LokiParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 115
+            self.state = 117
             _la = self._input.LA(1)
             if not((((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << LokiParser.WORD) | (1 << LokiParser.LEMMA) | (1 << LokiParser.TAG) | (1 << LokiParser.CHUNK) | (1 << LokiParser.ENTITY) | (1 << LokiParser.MENTION) | (1 << LokiParser.INCOMING) | (1 << LokiParser.OUTGOING))) != 0)):
                 self._errHandler.recoverInline(self)
