@@ -50,7 +50,7 @@ pattern_regex
   : SLASH regex SLASH ;
 
 pattern_literal
-  : (QUOTE literal QUOTE) | literal ;
+  : (QUOTE (PUNCT+ | '"' | '/' | literal) QUOTE) | literal ;
 
 inner_pattern
   : literal | regex ;
@@ -114,7 +114,7 @@ DIGIT
   : [0-9]+ ;
 
 PUNCT
-  : '.'|','|':'|'_'|';'|'?'|NEGATED|'-'|'^'|'$'|'*'|'+'|OPEN_TC|CLOSE_TC|'('|')'|'%'|'"'+ ;
+  : '.'|','|':'|'_'|';'|'?'|NEGATED|'-'|'^'|'$'|'*'|'+'|OPEN_TC|CLOSE_TC|'('|')'|'%'|'\''|'|'|'\\'+ ;
 
 WHITESPACE
   : [ \t\r\n]+ -> skip ;
