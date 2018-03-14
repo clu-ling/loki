@@ -17,6 +17,10 @@ json_file = os.path.join(__location__, "sentence2.json")
 with open(json_file, "r") as jf:
     sentence2 = Sentence.load_from_JSON(json.load(jf))
 
+json_file = os.path.join(__location__, "sentence3.json")
+with open(json_file, "r") as jf:
+    sentence3 = Sentence.load_from_JSON(json.load(jf))
+
 class LokiTests(unittest.TestCase):
     """
     Test application of Loki patterns
@@ -187,6 +191,22 @@ class LokiTests(unittest.TestCase):
         self.assertTrue(res == [9], "{} starting from position 4 should lead to position 9. Actual position: {}".format(pattern, res))
         res = compiled_pattern.match(sentence, range(len(sentence.words)))
         self.assertTrue(res == [9], "{} starting from any position should only lead to position 9. Actual position: {}".format(pattern, res))
+
+    def test_excessive_token_constraints(self):
+        # I like turtles .
+        pattern = "[] [] [] [] []"
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} should not return a match (consumes too many tokens)".format(pattern)
+        res = compiled_pattern.match(sentence3, range(len(sentence3.words)))
+        self.assertTrue(res == [], "{} starting from any position should not return any match. Actual result: {}".format(pattern, res))
+
+    def test_wildcard_token_constraints(self):
+        # I like turtles .
+        pattern = "[] [] [] []"
+        compiled_pattern = LokiCompiler.compile(pattern)
+        "{} starting from any position should only match/lead to the last token's position".format(pattern)
+        res = compiled_pattern.match(sentence3, range(len(sentence3.words)))
+        self.assertTrue(res == [3], "{} starting from any position should only lead to position 3. Actual result: {}".format(pattern, res))
 
 if __name__ == "__main__":
     unittest.main()
